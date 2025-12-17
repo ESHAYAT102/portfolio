@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <div className="pb-22">
       <div className="z-50 fixed w-full flex justify-center align-middle items-center">
-        <div className="max-w-268 px-20 py-6 mx-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60 bg-stone-950/30 backdrop-blur-sm">
+        <div className="px-4 min-[1000px]:px-20 py-6 mx-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60 bg-stone-950/30 backdrop-blur-sm">
           <div className="flex justify-between">
             <div className="flex justify-center align-middle items-center">
               <a href="/">
