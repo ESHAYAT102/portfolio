@@ -36,7 +36,7 @@ export default function TechStack() {
             <table className="w-full border border-stone-600/60">
               <tbody>
                 <tr>
-                  <th className="pl-4 py-2 border-t border-r border-stone-600/60 text-base text-left align-middle hover:bg-stone-600/60 transition-all duration-300">
+                  <th className="pl-4 py-2 border-t border-r border-stone-600/60 text-base text-left align-middle hover:bg-stone-50/10 transition-all duration-300">
                     Tech
                   </th>
                   <th className="pl-4 py-2 border-t border-stone-600/60 text-base text-left align-middle hover:bg-stone-600/60 transition-all duration-300">
@@ -47,7 +47,7 @@ export default function TechStack() {
                   const yearsOfExperience = currentYear - item.startYear;
                   return (
                     <tr key={index}>
-                      <td className="pl-4 py-2 border-t border-r border-stone-600/60 text-base align-middle hover:bg-stone-600/60 transition-all duration-300">
+                      <td className="pl-4 py-2 border-t border-r border-stone-600/60 text-base align-middle hover:bg-stone-50/10 transition-all duration-300">
                         {item.tech}
                       </td>
                       <td className="pl-4 py-2 border-t border-stone-600/60 text-base align-middle hover:bg-stone-600/60 transition-all duration-300">
