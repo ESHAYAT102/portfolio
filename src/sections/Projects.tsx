@@ -25,6 +25,11 @@ export default function Projects() {
       description: "Green accent catppuccin mocha theme for Omarchy.",
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-green-theme",
     },
+    {
+      name: "Flexoki dark theme",
+      description: "Flexoki dark theme for Omarchy.",
+      link: "https://github.com/ESHAYAT102/omarchy-flexoki-theme",
+    },
   ];
 
   return (
