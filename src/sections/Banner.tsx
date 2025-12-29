@@ -44,7 +44,7 @@ export default function Banner() {
                 </span>
               </span>{" "}
               designer, and I love to code (based in Bangladesh). I've always
-              been into computer. I was fascinated by the technology. Like{" "}
+              been into computers. I was fascinated by the technology. Like{" "}
               <span className="relative group">
                 <span className="text-stone-200">wdym</span>
                 <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
