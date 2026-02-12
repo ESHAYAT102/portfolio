@@ -12,7 +12,7 @@ export default function Projects() {
     },
     {
       name: "Archon",
-      description: "My Omarchy setup.",
+      description: "Automated scritp for Omarchy setup.",
       link: "https://archon.eshayat.com",
     },
     {
@@ -21,16 +21,11 @@ export default function Projects() {
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mauve-theme",
     },
     {
-      name: "Catppuccin green theme",
-      description: "Green accent catppuccin mocha theme for Omarchy.",
-      link: "https://github.com/ESHAYAT102/omarchy-catppuccin-green-theme",
+      name: "Finance Tracker",
+      description: "Keep track of where all your money goes.",
+      link: "https://github.com/ESHAYAT102/finance-tracker",
     },
-    {
-      name: "Flexoki dark theme",
-      description: "Flexoki dark theme for Omarchy.",
-      link: "https://github.com/ESHAYAT102/omarchy-flexoki-theme",
-    },
-  ];
+ ];
 
   return (
     <div>
