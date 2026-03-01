@@ -12,7 +12,7 @@ export default function Projects() {
     },
     {
       name: "Archon",
-      description: "Automated setup scritp for Omarchy.",
+      description: "Automated setup script for Omarchy.",
       link: "https://archon.eshayat.com",
     },
     {
