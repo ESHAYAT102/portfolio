@@ -17,7 +17,7 @@ export default function Projects() {
     },
     {
       name: "Catppuccin theme",
-      description: "Catppuccin mocha theme for Omarchy.",
+      description: "Sleek Catppuccin mocha theme for Omarchy.",
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
     },
     {
