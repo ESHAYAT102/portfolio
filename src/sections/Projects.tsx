@@ -18,7 +18,7 @@ export default function Projects() {
     {
       name: "Catppuccin theme",
       description: "Catppuccin mocha theme for Omarchy.",
-      link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mauve-theme",
+      link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
     },
     {
       name: "Finance Tracker",
