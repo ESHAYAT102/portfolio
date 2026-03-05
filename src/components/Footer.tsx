@@ -30,7 +30,7 @@ export default function Footer() {
               </a>
               <a
                 className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 transition-all duration-300"
-                href="https://www.instagram.com/eshayat_al_wasiu"
+                href="https://www.instagram.com/eshayat.wasiu"
                 target="blank"
               >
                 Instagram
