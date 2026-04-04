@@ -6,6 +6,11 @@ export default function Projects() {
       link: "https://esyt.eshayat.com",
     },
     {
+      name: "Moonify",
+      description: "CLI Moon Phase Calendar",
+      link: "https://github.com/ESHAYAT102/moonify",
+    },
+    {
       name: "Royal Baking BD",
       description: "Website for a baking company.",
       link: "https://royalbakingbd.com",
