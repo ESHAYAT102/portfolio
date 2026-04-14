@@ -9,10 +9,10 @@ export default function Footer() {
             <div className="text-center grid grid-cols-2 min-[1000px]:grid-cols-4 justify-center align-middle items-center">
               <a
                 className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-r border-b min-[1000px]:border-b-0 border-stone-600/60 transition-all duration-300"
-                href="https://esyt.eshayat.com"
+                href="mailto:eshayat.wasiu@gmail.com"
                 target="blank"
               >
-                ESYT
+                Contact
               </a>
               <a
                 className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-r-0 min-[1000px]:border-r border-b min-[1000px]:border-b-0 border-stone-600/60 transition-all duration-300"
