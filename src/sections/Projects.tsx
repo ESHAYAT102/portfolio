@@ -1,9 +1,9 @@
 export default function Projects() {
   const projects = [
     {
-      name: "OpenHub",
+      name: "Xenon",
       description: "Open source GitHub. Made just for fun :)",
-      link: "https://open-hub.eshayat.com",
+      link: "https://xenon.eshayat.com",
     },
     {
       name: "ESYT",
