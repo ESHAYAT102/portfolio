@@ -11,8 +11,13 @@ export default function Projects() {
       link: "https://esyt.eshayat.com",
     },
     {
+      name: "Milo",
+      description: "CLI email client",
+      link: "https://github.com/ESHAYAT102/milo",
+    },
+    {
       name: "Moonify",
-      description: "CLI Moon Phase Calendar",
+      description: "CLI moon phase calendar",
       link: "https://github.com/ESHAYAT102/moonify",
     },
     {
