@@ -56,7 +56,7 @@ export default function Banner() {
               to draw in MS Paint a lot as a kid, so the designer perspective
               started from there. I really loved the concept of telling the
               computer to do something for me, which got me interested in
-              programming so much. I'm focusing on developing tools for the
+              programming so much. I love developing tools for the
               developer community to make their experience faster and more
               automated.
             </p>
