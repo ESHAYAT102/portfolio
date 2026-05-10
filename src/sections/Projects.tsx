@@ -28,7 +28,7 @@ export default function Projects() {
     {
       name: "Archon",
       description: "Automated setup script for Omarchy.",
-      link: "https://archon.eshayat.com",
+      link: "https://github.com/ESHAYAT102/archon",
     },
     {
       name: "Catppuccin theme",
