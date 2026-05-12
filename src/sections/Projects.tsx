@@ -35,6 +35,11 @@ export default function Projects() {
       description: "Sleek Catppuccin mocha theme for Omarchy.",
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
     },
+    {
+      name: "Catppuccin theme",
+      description: "File transfer platform.",
+      link: "https://airpipe.eshayat.com",
+    },
  ];
 
   return (
