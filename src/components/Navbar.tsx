@@ -33,7 +33,7 @@ export default function Navbar() {
               </a>
               <a
                 className="bg-stone-200 text-stone-950 px-4 py-2 hover:bg-stone-300 transition-all duration-300"
-                href="mailto:eshayat.wasiu@gmail.com"
+                href="mailto:contact@eshayat.com"
                 target="blank"
               >
                 Contact
