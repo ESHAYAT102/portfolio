@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 const tooltipBaseClass =
-  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!top-4 max-[759px]:!right-4 max-[759px]:!bottom-auto max-[759px]:!left-4 max-[759px]:!translate-x-0 max-[759px]:z-50 max-[759px]:w-auto max-[759px]:text-center";
+  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!bottom-auto max-[759px]:z-50";
 
 const tooltipAlignmentClass = {
   center: "left-1/2 -translate-x-1/2",
@@ -13,6 +13,10 @@ const tooltipButtonClass =
   "relative group inline cursor-pointer border-0 bg-transparent p-0 font-[inherit] text-stone-200";
 
 type TooltipAlignment = keyof typeof tooltipAlignmentClass;
+type TooltipPosition = {
+  left: number;
+  top: number;
+};
 
 function isTouchLikeDevice() {
   return window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -23,6 +27,9 @@ export default function Banner() {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
   const [tooltipAlignments, setTooltipAlignments] = useState<
     Record<string, TooltipAlignment>
+  >({});
+  const [tooltipPositions, setTooltipPositions] = useState<
+    Record<string, TooltipPosition>
   >({});
 
   useEffect(() => {
@@ -65,12 +72,40 @@ export default function Banner() {
     }
 
     setTooltipAlignments((current) => ({ ...current, [id]: alignment }));
+
+    const mobileTooltipWidth = Math.min(320, window.innerWidth - 32);
+    const mobileLeft = Math.min(
+      Math.max(triggerCenter - mobileTooltipWidth / 2, edgePadding),
+      window.innerWidth - mobileTooltipWidth - edgePadding,
+    );
+
+    setTooltipPositions((current) => ({
+      ...current,
+      [id]: {
+        left: mobileLeft,
+        top: Math.max(rect.top - 8, edgePadding),
+      },
+    }));
   }
 
   function getTooltipClass(id: string) {
     return `${tooltipBaseClass} ${
       tooltipAlignmentClass[tooltipAlignments[id] ?? "center"]
     } ${activeTooltip === id ? "opacity-100" : ""}`;
+  }
+
+  function getTooltipStyle(id: string): CSSProperties | undefined {
+    const position = tooltipPositions[id];
+
+    if (!position || !isTouchLikeDevice()) return undefined;
+
+    return {
+      left: position.left,
+      top: position.top,
+      width: "max-content",
+      maxWidth: "calc(100vw - 2rem)",
+      transform: "translateY(-100%)",
+    };
   }
 
   function showTooltipOnTouch(
@@ -112,7 +147,10 @@ export default function Banner() {
               >
                 <span className="relative group">
                   <span className="text-stone-200">ESYT</span>
-                  <span className={getTooltipClass("esyt")}>
+                  <span
+                    className={getTooltipClass("esyt")}
+                    style={getTooltipStyle("esyt")}
+                  >
                     Automated React project scaffolding tool
                   </span>
                 </span>
@@ -128,7 +166,10 @@ export default function Banner() {
                 }
               >
                 FOSS
-                <span className={getTooltipClass("foss")}>
+                <span
+                  className={getTooltipClass("foss")}
+                  style={getTooltipStyle("foss")}
+                >
                   Free and Open Source Software
                 </span>
               </button>{" "}
@@ -147,7 +188,10 @@ export default function Banner() {
                 }
               >
                 y/o
-                <span className={getTooltipClass("age")}>
+                <span
+                  className={getTooltipClass("age")}
+                  style={getTooltipStyle("age")}
+                >
                   years old
                 </span>
               </button>{" "}
@@ -163,7 +207,10 @@ export default function Banner() {
                 }
               >
                 wdym
-                <span className={getTooltipClass("wdym")}>
+                <span
+                  className={getTooltipClass("wdym")}
+                  style={getTooltipStyle("wdym")}
+                >
                   what do you mean
                 </span>
               </button>{" "}
