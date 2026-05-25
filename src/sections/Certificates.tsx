@@ -6,28 +6,28 @@ export default function Banner() {
           <div className="px-4 min-[1000px]:px-20 py-20">
             <p className="mb-12 font-bold">Certificates</p>
             <div className="flex flex-col min-[760px]:flex-row gap-6 w-full">
-              <div className="flex flex-col gap-6 justify-between">
+              <div className="flex flex-col gap-6 justify-between min-w-0">
                 <img
-                  className="select-none w-fit h-fit grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  className="select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   src="cert1.png"
                   alt="Picture of a certificate by Programming Hero"
                 />
                 <img
-                  className="select-none w-fit h-fit grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  className="select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   src="cert2.png"
                   alt="Picture of a certificate by Codingal"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <img
-                  className="select-none w-fit h-fit grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  className="select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   src="cert3.png"
                   alt="Picture of a certificate by Codingal"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <img
-                  className="select-none w-fit h-fit grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  className="select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   src="cert4.png"
                   alt="Picture of a certificate by Codingal"
                 />
