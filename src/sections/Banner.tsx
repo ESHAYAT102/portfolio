@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tooltipBaseClass =
   "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!top-4 max-[759px]:!right-4 max-[759px]:!bottom-auto max-[759px]:!left-4 max-[759px]:!translate-x-0 max-[759px]:z-50 max-[759px]:w-auto max-[759px]:text-center";
@@ -24,6 +24,29 @@ export default function Banner() {
   const [tooltipAlignments, setTooltipAlignments] = useState<
     Record<string, TooltipAlignment>
   >({});
+
+  useEffect(() => {
+    if (!activeTooltip || !isTouchLikeDevice()) return;
+
+    function closeTooltipOnOutsideTap(event: PointerEvent) {
+      const target = event.target;
+
+      if (
+        target instanceof Element &&
+        target.closest("[data-tooltip-trigger]")
+      ) {
+        return;
+      }
+
+      setActiveTooltip(null);
+    }
+
+    document.addEventListener("pointerdown", closeTooltipOnOutsideTap);
+
+    return () => {
+      document.removeEventListener("pointerdown", closeTooltipOnOutsideTap);
+    };
+  }, [activeTooltip]);
 
   function updateTooltipAlignment(id: string, trigger: HTMLElement) {
     const rect = trigger.getBoundingClientRect();
@@ -81,6 +104,7 @@ export default function Banner() {
                 className="text-stone-200 hover:underline active:text-stone-400 transition-all duration-300"
                 href="https://esyt.eshayat.com"
                 target="blank"
+                data-tooltip-trigger
                 onClick={(event) => showTooltipOnTouch("esyt", event, true)}
                 onMouseEnter={(event) =>
                   updateTooltipAlignment("esyt", event.currentTarget)
@@ -97,6 +121,7 @@ export default function Banner() {
               <button
                 className={tooltipButtonClass}
                 type="button"
+                data-tooltip-trigger
                 onClick={(event) => showTooltipOnTouch("foss", event)}
                 onMouseEnter={(event) =>
                   updateTooltipAlignment("foss", event.currentTarget)
@@ -115,6 +140,7 @@ export default function Banner() {
               <button
                 className={tooltipButtonClass}
                 type="button"
+                data-tooltip-trigger
                 onClick={(event) => showTooltipOnTouch("age", event)}
                 onMouseEnter={(event) =>
                   updateTooltipAlignment("age", event.currentTarget)
@@ -130,6 +156,7 @@ export default function Banner() {
               <button
                 className={tooltipButtonClass}
                 type="button"
+                data-tooltip-trigger
                 onClick={(event) => showTooltipOnTouch("wdym", event)}
                 onMouseEnter={(event) =>
                   updateTooltipAlignment("wdym", event.currentTarget)
