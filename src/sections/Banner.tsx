@@ -1,10 +1,18 @@
 import { useState } from "react";
 
-const tooltipClass =
-  "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none";
+const tooltipBaseClass =
+  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none";
+
+const tooltipAlignmentClass = {
+  center: "left-1/2 -translate-x-1/2",
+  left: "left-0",
+  right: "right-0",
+};
 
 const tooltipButtonClass =
   "relative group inline cursor-pointer border-0 bg-transparent p-0 font-[inherit] text-stone-200";
+
+type TooltipAlignment = keyof typeof tooltipAlignmentClass;
 
 function isTouchLikeDevice() {
   return window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -13,12 +21,42 @@ function isTouchLikeDevice() {
 export default function Banner() {
   const currentYear = new Date().getFullYear();
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [tooltipAlignments, setTooltipAlignments] = useState<
+    Record<string, TooltipAlignment>
+  >({});
+
+  function updateTooltipAlignment(id: string, trigger: HTMLElement) {
+    const rect = trigger.getBoundingClientRect();
+    const triggerCenter = rect.left + rect.width / 2;
+    const estimatedTooltipWidth = Math.min(320, window.innerWidth - 32);
+    const edgePadding = 16;
+    let alignment: TooltipAlignment = "center";
+
+    if (triggerCenter - estimatedTooltipWidth / 2 < edgePadding) {
+      alignment = "left";
+    } else if (
+      triggerCenter + estimatedTooltipWidth / 2 >
+      window.innerWidth - edgePadding
+    ) {
+      alignment = "right";
+    }
+
+    setTooltipAlignments((current) => ({ ...current, [id]: alignment }));
+  }
+
+  function getTooltipClass(id: string) {
+    return `${tooltipBaseClass} ${
+      tooltipAlignmentClass[tooltipAlignments[id] ?? "center"]
+    } ${activeTooltip === id ? "opacity-100" : ""}`;
+  }
 
   function showTooltipOnTouch(
     id: string,
     event: React.MouseEvent<HTMLElement>,
     hasLink = false,
   ) {
+    updateTooltipAlignment(id, event.currentTarget);
+
     if (!isTouchLikeDevice()) return;
 
     if (hasLink && activeTooltip === id) return;
@@ -44,14 +82,13 @@ export default function Banner() {
                 href="https://esyt.eshayat.com"
                 target="blank"
                 onClick={(event) => showTooltipOnTouch("esyt", event, true)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("esyt", event.currentTarget)
+                }
               >
                 <span className="relative group">
                   <span className="text-stone-200">ESYT</span>
-                  <span
-                    className={`${tooltipClass} ${
-                      activeTooltip === "esyt" ? "opacity-100" : ""
-                    }`}
-                  >
+                  <span className={getTooltipClass("esyt")}>
                     Automated React project scaffolding tool
                   </span>
                 </span>
@@ -61,13 +98,12 @@ export default function Banner() {
                 className={tooltipButtonClass}
                 type="button"
                 onClick={(event) => showTooltipOnTouch("foss", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("foss", event.currentTarget)
+                }
               >
                 FOSS
-                <span
-                  className={`${tooltipClass} ${
-                    activeTooltip === "foss" ? "opacity-100" : ""
-                  }`}
-                >
+                <span className={getTooltipClass("foss")}>
                   Free and Open Source Software
                 </span>
               </button>{" "}
@@ -80,13 +116,12 @@ export default function Banner() {
                 className={tooltipButtonClass}
                 type="button"
                 onClick={(event) => showTooltipOnTouch("age", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("age", event.currentTarget)
+                }
               >
                 y/o
-                <span
-                  className={`${tooltipClass} ${
-                    activeTooltip === "age" ? "opacity-100" : ""
-                  }`}
-                >
+                <span className={getTooltipClass("age")}>
                   years old
                 </span>
               </button>{" "}
@@ -96,13 +131,12 @@ export default function Banner() {
                 className={tooltipButtonClass}
                 type="button"
                 onClick={(event) => showTooltipOnTouch("wdym", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("wdym", event.currentTarget)
+                }
               >
                 wdym
-                <span
-                  className={`${tooltipClass} ${
-                    activeTooltip === "wdym" ? "opacity-100" : ""
-                  }`}
-                >
+                <span className={getTooltipClass("wdym")}>
                   what do you mean
                 </span>
               </button>{" "}
