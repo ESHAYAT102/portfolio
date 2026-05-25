@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const tooltipBaseClass =
-  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none";
+  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!top-4 max-[759px]:!right-4 max-[759px]:!bottom-auto max-[759px]:!left-4 max-[759px]:!translate-x-0 max-[759px]:z-50 max-[759px]:w-auto max-[759px]:text-center";
 
 const tooltipAlignmentClass = {
   center: "left-1/2 -translate-x-1/2",
