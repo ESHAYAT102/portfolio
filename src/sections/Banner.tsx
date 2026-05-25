@@ -58,14 +58,20 @@ export default function Banner() {
   function updateTooltipAlignment(id: string, trigger: HTMLElement) {
     const rect = trigger.getBoundingClientRect();
     const triggerCenter = rect.left + rect.width / 2;
-    const estimatedTooltipWidth = Math.min(320, window.innerWidth - 32);
     const edgePadding = 16;
+    const tooltip = trigger.querySelector<HTMLElement>(
+      "[data-tooltip-content]",
+    );
+    const tooltipWidth = Math.min(
+      tooltip?.offsetWidth || window.innerWidth - edgePadding * 2,
+      window.innerWidth - edgePadding * 2,
+    );
     let alignment: TooltipAlignment = "center";
 
-    if (triggerCenter - estimatedTooltipWidth / 2 < edgePadding) {
+    if (triggerCenter - tooltipWidth / 2 < edgePadding) {
       alignment = "left";
     } else if (
-      triggerCenter + estimatedTooltipWidth / 2 >
+      triggerCenter + tooltipWidth / 2 >
       window.innerWidth - edgePadding
     ) {
       alignment = "right";
@@ -73,10 +79,9 @@ export default function Banner() {
 
     setTooltipAlignments((current) => ({ ...current, [id]: alignment }));
 
-    const mobileTooltipWidth = Math.min(320, window.innerWidth - 32);
     const mobileLeft = Math.min(
-      Math.max(triggerCenter - mobileTooltipWidth / 2, edgePadding),
-      window.innerWidth - mobileTooltipWidth - edgePadding,
+      Math.max(triggerCenter - tooltipWidth / 2, edgePadding),
+      window.innerWidth - tooltipWidth - edgePadding,
     );
 
     setTooltipPositions((current) => ({
@@ -150,6 +155,7 @@ export default function Banner() {
                   <span
                     className={getTooltipClass("esyt")}
                     style={getTooltipStyle("esyt")}
+                    data-tooltip-content
                   >
                     Automated React project scaffolding tool
                   </span>
@@ -169,6 +175,7 @@ export default function Banner() {
                 <span
                   className={getTooltipClass("foss")}
                   style={getTooltipStyle("foss")}
+                  data-tooltip-content
                 >
                   Free and Open Source Software
                 </span>
@@ -191,6 +198,7 @@ export default function Banner() {
                 <span
                   className={getTooltipClass("age")}
                   style={getTooltipStyle("age")}
+                  data-tooltip-content
                 >
                   years old
                 </span>
@@ -210,6 +218,7 @@ export default function Banner() {
                 <span
                   className={getTooltipClass("wdym")}
                   style={getTooltipStyle("wdym")}
+                  data-tooltip-content
                 >
                   what do you mean
                 </span>
