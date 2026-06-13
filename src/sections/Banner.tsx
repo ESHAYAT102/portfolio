@@ -243,14 +243,31 @@ export default function Banner() {
                   what do you mean
                 </span>
               </button>{" "}
-              I can tell a box made out of metal, silicon and other stuff to do
-              something and it literally does what I told it to do. Also I used
-              to draw in MS Paint a lot as a kid, so the designer perspective
-              started from there. I really loved the concept of telling the
-              computer to do something for me, which got me interested in
-              programming so much. I love developing tools for the
-              developer community to make their experience faster and more
-              automated.
+              I can tell a box made out of metaland all to do something and
+              it literally does what I told it to do. Also I used to draw in
+              MS Paint a lot as a kid, so the designer perspective started
+              from there. I really loved the concept of telling the computer
+              to do something for me, which got me interested in programming
+              so much. I love developing tools for the developer community
+              to make the world a better place{" "}
+              <button
+                className={tooltipButtonClass}
+                type="button"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("ig", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("ig", event.currentTarget)
+                }
+              >
+                ig
+                <span
+                  className={getTooltipClass("ig")}
+                  style={getTooltipStyle("ig")}
+                  data-tooltip-content
+                >
+                  I guess
+                </span>
+              </button>.
             </p>
           </div>
         </div>
