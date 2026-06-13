@@ -22,14 +22,7 @@ export default function Navbar() {
                 href="https://x.com/Esh_ayat"
                 target="blank"
               >
-                X/Twitter
-              </a>
-              <a
-                className="hover:underline active:text-stone-400 transition-all duration-300"
-                href="https://www.instagram.com/eshayat.wasiu"
-                target="blank"
-              >
-                Instagram
+                Twitter/X
               </a>
               <a
                 className="bg-stone-200 text-stone-950 px-4 py-2 hover:bg-stone-300 transition-all duration-300"

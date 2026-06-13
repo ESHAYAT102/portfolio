@@ -6,16 +6,16 @@ export default function Footer() {
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div>
-            <div className="text-center grid grid-cols-2 min-[1000px]:grid-cols-4 justify-center align-middle items-center">
+            <div className="text-center grid grid-cols-1 min-[760px]:grid-cols-3 justify-center align-middle items-center">
               <a
-                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-r border-b min-[1000px]:border-b-0 border-stone-600/60 transition-all duration-300"
+                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-b min-[760px]:border-b-0 min-[760px]:border-r border-stone-600/60 transition-all duration-300"
                 href="mailto:contact@eshayat.com"
                 target="blank"
               >
-                Contact
+                Contact (email)
               </a>
               <a
-                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-r-0 min-[1000px]:border-r border-b min-[1000px]:border-b-0 border-stone-600/60 transition-all duration-300"
+                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-b min-[760px]:border-b-0 min-[760px]:border-r border-stone-600/60 transition-all duration-300"
                 href="https://github.com/ESHAYAT102"
                 target="blank"
               >
@@ -26,14 +26,7 @@ export default function Footer() {
                 href="https://x.com/Esh_ayat"
                 target="blank"
               >
-                X/Twitter
-              </a>
-              <a
-                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 transition-all duration-300"
-                href="https://www.instagram.com/eshayat.wasiu"
-                target="blank"
-              >
-                Instagram
+                Twitter/X
               </a>
             </div>
           </div>

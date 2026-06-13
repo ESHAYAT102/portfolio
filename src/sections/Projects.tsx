@@ -36,7 +36,7 @@ export default function Projects() {
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
     },
     {
-      name: "Catppuccin theme",
+      name: "AirPipe",
       description: "File transfer platform.",
       link: "https://airpipe.eshayat.com",
     },

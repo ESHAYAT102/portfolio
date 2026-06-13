@@ -1,64 +1,96 @@
-const experienceData = [
-  { tech: "Node.js", startYear: 2021 },
-  { tech: "Express", startYear: 2023 },
-  { tech: "React", startYear: 2022 },
-  { tech: "Vite", startYear: 2022 },
-  { tech: "JavaScript", startYear: 2022 },
-  { tech: "TypeScript", startYear: 2023 },
-  { tech: "Tailwind CSS", startYear: 2022 },
-  { tech: "MongoDB", startYear: 2024 },
-  { tech: "Firebase", startYear: 2023 },
-  { tech: "Clerk", startYear: 2024 },
-  { tech: "Vercel", startYear: 2022 },
-  { tech: "Git & GitHub", startYear: 2021 },
-  { tech: "Figma", startYear: 2019 },
-  { tech: "Notion", startYear: 2023 },
-  { tech: "Python", startYear: 2024 },
-  { tech: "Go", startYear: 2024 },
+const stackGroups = [
+  {
+    title: "Interface",
+    description: "Building responsive, interactive product surfaces.",
+    tools: [
+      "React",
+      "NextJS",
+      "Vite",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN",
+    ],
+  },
+  {
+    title: "Backend",
+    description: "Creating APIs and small services that support the app.",
+    tools: ["Node.js", "Express", "Python", "Go"],
+  },
+  {
+    title: "Data & Auth",
+    description: "Connecting products to storage, accounts, and permissions.",
+    tools: ["PostgreSQL", "MongoDB", "Neon", "Firebase", "Clerk"],
+  },
+  {
+    title: "Shipping",
+    description: "Keeping projects versioned, deployed, and maintainable.",
+    tools: ["Git & GitHub", "Vercel", "Docker"],
+  },
+  {
+    title: "Design & Planning",
+    description: "Turning rough ideas into usable interfaces and roadmaps.",
+    tools: ["Figma", "Notion", "tldraw"],
+  },
+  {
+    title: "Apps I Like",
+    description: "A few tools and environments I enjoy using day to day.",
+    tools: ["Zen Browser", "Ghostty", "Zed", "LocalSend"],
+  },
 ];
 
 export default function TechStack() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <div>
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="px-4 min-[1000px]:px-20 py-20">
-            <div className="mb-12">
+            <div className="mb-12 max-w-2xl">
               <p className="font-bold">Tech Stack</p>
               <p className="text-stone-300/70 mt-4">
-                Designing and developing web technologies for{" "}
-                {currentYear - 2019} years.
+                Tools I reach for when designing, building, and shipping web
+                projects.
               </p>
             </div>
 
-            <table className="w-full border border-stone-600/60">
-              <tbody>
-                <tr>
-                  <th className="pl-4 py-2 border-t border-r border-stone-600/60 text-base text-left align-middle hover:bg-stone-50/10 transition-all duration-300">
-                    Tech
-                  </th>
-                  <th className="pl-4 py-2 border-t border-stone-600/60 text-base text-left align-middle hover:bg-stone-600/60 transition-all duration-300">
-                    Experience
-                  </th>
-                </tr>
-                {experienceData.map((item, index) => {
-                  const yearsOfExperience = currentYear - item.startYear;
-                  return (
-                    <tr key={index}>
-                      <td className="pl-4 py-2 border-t border-r border-stone-600/60 text-base align-middle hover:bg-stone-50/10 transition-all duration-300">
-                        {item.tech}
-                      </td>
-                      <td className="pl-4 py-2 border-t border-stone-600/60 text-base align-middle hover:bg-stone-600/60 transition-all duration-300">
-                        {yearsOfExperience}{" "}
-                        {yearsOfExperience === 1 ? "year" : "years"}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            <div className="grid grid-cols-1 min-[760px]:grid-cols-2 border border-stone-600/60">
+              {stackGroups.map((group, index) => (
+                <section
+                  key={group.title}
+                  className={`
+                    border-stone-600/60 p-6 min-[760px]:p-8 hover:bg-stone-50/10 transition-all duration-300
+                    ${index > 0 ? "border-t" : ""}
+                    ${index % 2 === 1 ? "min-[760px]:border-l" : ""}
+                    ${index === 1 ? "min-[760px]:border-t-0" : ""}
+                  `}
+                >
+                  <div className="flex items-start gap-4">
+                    <p className="-mt-1 text-stone-300/70 leading-none">
+                      [<span className="text-2xl relative top-2">*</span>]
+                    </p>
+                    <div>
+                      <h3 className="font-semibold text-stone-100">
+                        {group.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-stone-300/70">
+                        {group.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {group.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="border border-stone-600/60 px-3 py-1.5 text-sm text-stone-200 bg-stone-950/20"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
           </div>
         </div>
       </div>
