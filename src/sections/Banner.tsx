@@ -139,8 +139,48 @@ export default function Banner() {
               <br /> I'm Eshayat Al-Wasiu, a designer who codes.
             </h1>
             <p className="text-stone-300/70 mt-4">
-              Currently maintaining{" "}
+              Currently maintaining personal{" "}
+              <button
+                className={tooltipButtonClass}
+                type="button"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("foss", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("foss", event.currentTarget)
+                }
+              >
+                FOSS
+                <span
+                  className={getTooltipClass("foss")}
+                  style={getTooltipStyle("foss")}
+                  data-tooltip-content
+                >
+                  Free and Open Source Software
+                </span>
+              </button>{" "}
+              projects like {" "}
               <a
+                className="text-stone-200 hover:underline active:text-stone-400 transition-all duration-300"
+                href="https://xenon.eshayat.com"
+                target="blank"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("xenon", event, true)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("xenon", event.currentTarget)
+                }
+              >
+                <span className="relative group">
+                  <span className="text-stone-200">Xenon</span>
+                  <span
+                    className={getTooltipClass("xenon")}
+                    style={getTooltipStyle("xenon")}
+                    data-tooltip-content
+                  >
+                    Open source GitHub client
+                  </span>
+                </span>
+              </a>{" "}
+              & <a
                 className="text-stone-200 hover:underline active:text-stone-400 transition-all duration-300"
                 href="https://esyt.eshayat.com"
                 target="blank"
@@ -160,27 +200,7 @@ export default function Banner() {
                     Automated React project scaffolding tool
                   </span>
                 </span>
-              </a>{" "}
-              & working on personal projects (
-              <button
-                className={tooltipButtonClass}
-                type="button"
-                data-tooltip-trigger
-                onClick={(event) => showTooltipOnTouch("foss", event)}
-                onMouseEnter={(event) =>
-                  updateTooltipAlignment("foss", event.currentTarget)
-                }
-              >
-                FOSS
-                <span
-                  className={getTooltipClass("foss")}
-                  style={getTooltipStyle("foss")}
-                  data-tooltip-content
-                >
-                  Free and Open Source Software
-                </span>
-              </button>{" "}
-              of course).
+              </a>.
             </p>
             <br />
             <p className="text-stone-300/70">
