@@ -247,9 +247,9 @@ export default function Banner() {
               it literally does what I told it to do. I also used to draw in
               MS Paint a lot as a kid, so the designer perspective started
               from there. I really loved the concept of telling the computer
-              to do something for me, which got me interested in programming
-              so much. I love developing tools for the developer community
-              to... make the world a better place,{" "}
+              to do something for me, which got me into programming so much.
+              I love developing tools for the developer community to...
+              make the world a better place,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
