@@ -249,7 +249,7 @@ export default function Banner() {
               from there. I really loved the concept of telling the computer
               to do something for me, which got me interested in programming
               so much. I love developing tools for the developer community
-              to make the world a better place{" "}
+              to... make the world a better place,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
