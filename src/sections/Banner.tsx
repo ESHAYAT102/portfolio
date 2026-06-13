@@ -267,7 +267,7 @@ export default function Banner() {
                 >
                   I guess
                 </span>
-              </button>.
+              </button>{" "} :).
             </p>
           </div>
         </div>
