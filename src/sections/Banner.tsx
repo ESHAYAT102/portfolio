@@ -176,7 +176,7 @@ export default function Banner() {
                     style={getTooltipStyle("xenon")}
                     data-tooltip-content
                   >
-                    Open source GitHub client
+                    GitHub, but better
                   </span>
                 </span>
               </a>{" "}
