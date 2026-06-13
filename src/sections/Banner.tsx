@@ -244,7 +244,7 @@ export default function Banner() {
                 </span>
               </button>{" "}
               I can tell a box made out of metal and all to do something and
-              it literally does what I told it to do. Also I used to draw in
+              it literally does what I told it to do. I also used to draw in
               MS Paint a lot as a kid, so the designer perspective started
               from there. I really loved the concept of telling the computer
               to do something for me, which got me interested in programming
