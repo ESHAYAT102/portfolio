@@ -2,8 +2,13 @@ export default function Projects() {
   const projects = [
     {
       name: "Xenon",
-      description: "Open source GitHub. Made just for fun :)",
+      description: "Raycast for GitHub in the web.",
       link: "https://xenon.eshayat.com",
+    },
+    {
+      name: "Adrian",
+      description: "Self hostable private GitHub",
+      link: "https://github.com/ESHAYAT102/adrian",
     },
     {
       name: "ESYT",
