@@ -2,7 +2,7 @@ export default function Projects() {
   const projects = [
     {
       name: "Xenon",
-      description: "Raycast for GitHub in the web.",
+      description: "Raycast for GitHub in the web",
       link: "https://xenon.eshayat.com",
     },
     {
@@ -12,7 +12,7 @@ export default function Projects() {
     },
     {
       name: "ESYT",
-      description: "Automated React project scaffolding tool.",
+      description: "Automated React project scaffolding tool",
       link: "https://esyt.eshayat.com",
     },
     {
@@ -27,22 +27,22 @@ export default function Projects() {
     },
     {
       name: "Royal Baking BD",
-      description: "Website for a baking company.",
+      description: "Website for a baking company",
       link: "https://royalbakingbd.com",
     },
     {
       name: "Archon",
-      description: "Automated setup script for Omarchy.",
+      description: "Automated setup script for Omarchy",
       link: "https://github.com/ESHAYAT102/archon",
     },
     {
       name: "Catppuccin theme",
-      description: "Sleek Catppuccin mocha theme for Omarchy.",
+      description: "Sleek Catppuccin mocha theme for Omarchy",
       link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
     },
     {
       name: "AirPipe",
-      description: "File transfer platform.",
+      description: "File transfer platform",
       link: "https://airpipe.eshayat.com",
     },
  ];
