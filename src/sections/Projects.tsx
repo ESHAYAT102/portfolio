@@ -16,6 +16,11 @@ export default function Projects() {
       link: "https://esyt.eshayat.com",
     },
     {
+      name: "Skater",
+      description: "TUI for skate (by charm)",
+      link: "https://github.com/ESHAYAT102/skater",
+    },
+    {
       name: "Milo",
       description: "CLI email client",
       link: "https://github.com/ESHAYAT102/milo",
