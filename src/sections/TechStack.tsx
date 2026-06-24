@@ -13,14 +13,14 @@ const stackGroups = [
     ],
   },
   {
-    title: "Backend",
-    description: "Creating APIs and small services that support the app.",
-    tools: ["Node.js", "Express", "Python", "Go"],
-  },
-  {
     title: "Data & Auth",
     description: "Connecting products to storage, accounts, and permissions.",
     tools: ["PostgreSQL", "MongoDB", "Neon", "Firebase", "Clerk"],
+  },
+  {
+    title: "Backend",
+    description: "Creating APIs and small services that support the app.",
+    tools: ["Node.js", "Express", "Python", "Go"],
   },
   {
     title: "Shipping",
