@@ -244,12 +244,11 @@ export default function Banner() {
                 </span>
               </button>{" "}
               I can tell a box made out of metal and all to do something and
-              it literally does what I told it to do. I also used to draw in
-              MS Paint a lot as a kid, so the designer perspective started
-              from there. I really love the concept of telling the computer
-              to do something for me, which got me into programming so much.
-              I love developing tools for the developer community to...
-              make the world a better place,{" "}
+              it literally does it. I also used to draw in MS Paint a lot as
+              a kid, so the designer perspective started from there. I really
+              love the concept of telling the computer to do something for me,
+              which got me into programming so much. I love developing tools
+              for the developer community to... make the world a better place,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
