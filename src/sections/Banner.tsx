@@ -224,7 +224,7 @@ export default function Banner() {
                 </span>
               </button>{" "}
               designer, and I love to code. I'm based in Bangladesh. I've always
-              been into computers, I was fascinated by the technology, like{" "}
+              been obsessed with computers, I'm fascinated by the technology, like{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
@@ -246,7 +246,7 @@ export default function Banner() {
               I can tell a box made out of metal and all to do something and
               it literally does what I told it to do. I also used to draw in
               MS Paint a lot as a kid, so the designer perspective started
-              from there. I really loved the concept of telling the computer
+              from there. I really love the concept of telling the computer
               to do something for me, which got me into programming so much.
               I love developing tools for the developer community to...
               make the world a better place,{" "}
