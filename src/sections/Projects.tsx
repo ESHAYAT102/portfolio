@@ -1,54 +1,54 @@
 export default function Projects() {
   const projects = [
-    {
-      name: "Xenon",
-      description: "Raycast for GitHub in the web",
-      link: "https://xenon.eshayat.com",
-    },
-    {
-      name: "Adrian",
-      description: "Self hostable private GitHub",
-      link: "https://github.com/ESHAYAT102/adrian",
-    },
-    {
-      name: "ESYT",
-      description: "Automated React project scaffolding tool",
-      link: "https://esyt.eshayat.com",
-    },
-    {
-      name: "Skater",
-      description: "TUI for skate (by charm)",
-      link: "https://github.com/ESHAYAT102/skater",
-    },
-    {
-      name: "Milo",
-      description: "CLI email client",
-      link: "https://github.com/ESHAYAT102/milo",
-    },
-    {
-      name: "Moonify",
-      description: "CLI moon phase calendar",
-      link: "https://github.com/ESHAYAT102/moonify",
-    },
+  {
+    name: "Xenon",
+    description: "GitHub with Raycast and Twitter",
+    link: "https://xenon.eshayat.com",
+  },
+  {
+    name: "Adrian",
+    description: "Self hostable private GitHub",
+    link: "https://github.com/ESHAYAT102/adrian",
+  },
+  {
+    name: "ESYT",
+    description: "Automated React project scaffolding tool",
+    link: "https://esyt.eshayat.com",
+  },
+  {
+    name: "Skater",
+    description: "TUI for skate (by Charm)",
+    link: "https://github.com/ESHAYAT102/skater",
+  },
+  {
+    name: "Milo",
+    description: "CLI email client (for Resend)",
+    link: "https://github.com/ESHAYAT102/milo",
+  },
+  {
+    name: "Moonify",
+    description: "CLI moon phase calendar",
+    link: "https://github.com/ESHAYAT102/moonify",
+  },
+  {
+    name: "AirPipe",
+    description: "File transfer platform",
+    link: "https://airpipe.eshayat.com",
+  },
+  {
+    name: "Archon",
+    description: "Automated setup script for Omarchy",
+    link: "https://github.com/ESHAYAT102/archon",
+  },
+  {
+    name: "Catppuccin theme",
+    description: "Sleek Catppuccin mocha theme for Omarchy",
+    link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
+  },
     {
       name: "Royal Baking BD",
       description: "Website for a baking company",
       link: "https://royalbakingbd.com",
-    },
-    {
-      name: "Archon",
-      description: "Automated setup script for Omarchy",
-      link: "https://github.com/ESHAYAT102/archon",
-    },
-    {
-      name: "Catppuccin theme",
-      description: "Sleek Catppuccin mocha theme for Omarchy",
-      link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
-    },
-    {
-      name: "AirPipe",
-      description: "File transfer platform",
-      link: "https://airpipe.eshayat.com",
     },
  ];
 
