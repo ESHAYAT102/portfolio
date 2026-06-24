@@ -223,8 +223,8 @@ export default function Banner() {
                   years old
                 </span>
               </button>{" "}
-              designer, and I love to code. I'm based in Bangladesh. I've always
-              been obsessed with computers, I'm fascinated by the technology, like{" "}
+              designer based in Bangladesh, and I love to code.
+              I've always been obsessed with computers, like{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
