@@ -22,7 +22,7 @@ export default function Footer() {
                 GitHub
               </a>
               <a
-                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 border-r border-stone-600/60 transition-all duration-300"
+                className="col-span-1 hover:underline hover:bg-stone-500/10 active:text-stone-400 py-8 min-[760px]:border-b-0 min-[760px]:border-r border-stone-600/60 transition-all duration-300"
                 href="https://x.com/Esh_ayat"
                 target="blank"
               >
