@@ -35,7 +35,7 @@ const stackGroups = [
   {
     title: "Apps I Like",
     description: "A few tools and environments I enjoy using day to day.",
-    tools: ["Zen Browser", "Ghostty", "Zed", "LocalSend"],
+    tools: ["Zen Browser", "Ghostty", "Zed", "LocalSend", "AirPipe"],
   },
 ];
 
