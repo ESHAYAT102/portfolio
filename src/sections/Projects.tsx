@@ -31,11 +31,6 @@ export default function Projects() {
     link: "https://github.com/ESHAYAT102/moonify",
   },
   {
-    name: "AirPipe",
-    description: "File transfer platform",
-    link: "https://airpipe.eshayat.com",
-  },
-  {
     name: "Archon",
     description: "Automated setup script for Omarchy",
     link: "https://github.com/ESHAYAT102/archon",
