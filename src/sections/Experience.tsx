@@ -8,12 +8,12 @@ export default function Experience() {
     {
       role: "Designer & Developer",
       company: "AnM Studio",
-      duration: "2024 - Present",
+      duration: "2024 - 2026",
     },
     {
       role: "Frontend Developer",
       company: "Graphics Verse",
-      duration: "2024 - Present",
+      duration: "2025 - 2026",
     },
   ];
 
