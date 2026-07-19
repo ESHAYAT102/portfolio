@@ -1,4 +1,26 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import {
+  Suspense,
+  useEffect,
+  useState,
+  type CSSProperties,
+} from "react";
+
+import {
+  GitHubContributions,
+  GitHubContributionsFallback,
+} from "@/components/github-contributions";
+import type { Activity } from "@/components/contribution-graph";
+
+const githubContributions = fetch(
+  "https://github-contributions-api.jogruber.de/v4/ESHAYAT102?y=last",
+)
+  .then(async (response) =>
+    response.ok
+      ? ((await response.json()) as { contributions?: Activity[] })
+          .contributions ?? []
+      : [],
+  )
+  .catch(() => []);
 
 const tooltipBaseClass =
   "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!bottom-auto max-[759px]:z-50";
@@ -131,8 +153,8 @@ export default function Banner() {
   return (
     <div>
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
-        <div className="mx-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
-          <div className="px-4 min-[1000px]:px-20 pt-10 pb-20 min-[760px]:py-20">
+        <div className="mx-0 min-w-0 min-[1000px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
+          <div className="min-w-0 px-4 min-[1000px]:px-20 pt-10 pb-20 min-[760px]:py-20">
             <p>Designer & Frontend Developer</p>
             <h1 className="text-3xl font-semibold mt-10">
               Hi there!
@@ -268,6 +290,13 @@ export default function Banner() {
                 </span>
               </button>{" "} :)
             </p>
+            <Suspense fallback={<GitHubContributionsFallback />}>
+              <GitHubContributions
+                className="mt-12 min-w-0 w-full"
+                contributions={githubContributions}
+                githubProfileUrl="https://github.com/ESHAYAT102"
+              />
+            </Suspense>
           </div>
         </div>
       </div>
