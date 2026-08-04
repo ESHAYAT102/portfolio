@@ -50,6 +50,12 @@ export default function Projects() {
       description: "Website for a baking company",
       link: "https://royalbakingbd.com",
     },
+  },
+    {
+      name: "Nooreyah",
+      description: "Website for a clothing store",
+      link: "https://nooreyah.com",
+    },
  ];
 
   return (
