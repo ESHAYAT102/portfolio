@@ -6,9 +6,9 @@ export default function Projects() {
     link: "https://xenon.eshayat.com",
   },
   {
-    name: "Adrian",
-    description: "Self hostable private GitHub",
-    link: "https://github.com/ESHAYAT102/adrian",
+    name: "Argus",
+    description: "env manager right in your terminal",
+    link: "https://github.com/ESHAYAT102/argus",
   },
   {
     name: "ESYT",
