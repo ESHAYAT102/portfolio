@@ -45,17 +45,16 @@ export default function Projects() {
     description: "Sleek Catppuccin mocha theme for Omarchy",
     link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
   },
-    {
-      name: "Royal Baking BD",
-      description: "Website for a baking company",
-      link: "https://royalbakingbd.com",
-    },
+  {
+    name: "Royal Baking BD",
+    description: "Website for a baking company",
+    link: "https://royalbakingbd.com",
   },
-    {
-      name: "Nooreyah",
-      description: "Website for a clothing store",
-      link: "https://nooreyah.com",
-    },
+  {
+    name: "Nooreyah",
+    description: "Website for a clothing store",
+    link: "https://nooreyah.com",
+  },
  ];
 
   return (
