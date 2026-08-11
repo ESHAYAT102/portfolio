@@ -41,11 +41,6 @@ export default function Projects() {
     link: "https://github.com/ESHAYAT102/archon",
   },
   {
-    name: "Catppuccin theme",
-    description: "Sleek Catppuccin mocha theme for Omarchy",
-    link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
-  },
-  {
     name: "Royal Baking BD",
     description: "Website for a baking company",
     link: "https://royalbakingbd.com",

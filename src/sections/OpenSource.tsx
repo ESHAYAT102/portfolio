@@ -10,6 +10,11 @@ export default function OpenSource() {
       description: "Codex extension for Vicinae",
       link: "https://github.com/ESHAYAT102/vicinae-codex-extension",
     },
+    {
+    name: "Catppuccin theme",
+    description: "Sleek Catppuccin mocha theme for Omarchy",
+    link: "https://github.com/ESHAYAT102/omarchy-catppuccin-mocha-theme",
+    },
   ];
 
   return (
