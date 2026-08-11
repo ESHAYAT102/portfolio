@@ -226,7 +226,7 @@ export default function Banner() {
             </p>
             <br />
             <p className="text-stone-300/70">
-              Yo! I'm a {currentYear - 2010}{" "}
+              Hey! I'm a {currentYear - 2010}{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
@@ -290,7 +290,11 @@ export default function Banner() {
                 </span>
               </button>{" "} :)
             </p>
-            <Suspense fallback={<GitHubContributionsFallback />}>
+            <br />
+            <p className="text-stone-300/70">
+              I use Arch btw...
+            </p>
+           <Suspense fallback={<GitHubContributionsFallback />}>
               <GitHubContributions
                 className="mt-12 min-w-0 w-full"
                 contributions={githubContributions}
