@@ -10,7 +10,7 @@ const hobbies = [
 export default function Hobbies() {
   return (
     <div className="w-screen min-[1000px]:w-full flex justify-center items-center">
-      <div className="mx-0 min-[1000px]:mx-8 min-[1280px]:mx-20 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
+      <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
         <div className="px-4 min-[1000px]:px-20 py-20">
           <div className="mb-12 max-w-2xl">
             <p className="font-bold text-balance">Things I Love to Do</p>
