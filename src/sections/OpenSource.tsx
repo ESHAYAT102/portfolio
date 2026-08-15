@@ -1,6 +1,11 @@
 export default function OpenSource() {
   const contributions = [
     {
+      name: "Notification Center",
+      description: "Notification center in the Omarchy menu bar",
+      link: "https://github.com/ESHAYAT102/notification-center-omarchy-plugin",
+    },
+    {
       name: "Vicinae Confetti Extension",
       description: "Confetti extension for Vicinae",
       link: "https://github.com/ESHAYAT102/vicinae-confetti-extension",
