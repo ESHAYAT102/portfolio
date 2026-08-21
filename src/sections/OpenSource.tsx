@@ -1,9 +1,19 @@
 export default function OpenSource() {
   const contributions = [
     {
+      name: "AJAZZ Keyboard",
+      description: "AJAZZ keyboard driver for Omarchy",
+      link: "https://github.com/ESHAYAT102/ajazz-keyboard-omarchy-plugin",
+    },
+    {
       name: "Notification Center",
       description: "Notification center in the Omarchy menu bar",
       link: "https://github.com/ESHAYAT102/notification-center-omarchy-plugin",
+    },
+    {
+      name: "Hide Icons",
+      description: "Hide Omarchy menu bar icons, keep your desktop clean",
+      link: "https://github.com/ESHAYAT102/hide-icons-omarchy-plugin",
     },
     {
       name: "Vicinae Confetti Extension",
