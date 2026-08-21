@@ -1,6 +1,11 @@
 export default function OpenSource() {
   const contributions = [
     {
+      name: "Confetti",
+      description: "Raycast style confetti for Omarchy",
+      link: "https://github.com/ESHAYAT102/confetti-omarchy-plugin",
+    },
+    {
       name: "AJAZZ Keyboard",
       description: "AJAZZ keyboard driver for Omarchy",
       link: "https://github.com/ESHAYAT102/ajazz-keyboard-omarchy-plugin",
