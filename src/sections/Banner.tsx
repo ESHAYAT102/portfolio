@@ -155,10 +155,27 @@ export default function Banner() {
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-w-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="min-w-0 px-4 min-[1000px]:px-20 pt-10 pb-20 min-[760px]:py-20">
-            <p>Designer & Frontend Developer</p>
+            <p><span className="text-stone-300/70">Linux nerd</span> && <span className="text-stone-300/70">Developer</span> && <span className="text-stone-300/70">Designer</span></p>
             <h1 className="text-3xl font-semibold mt-10">
               Hi there!
-              <br /> I'm Eshayat Al-Wasiu, a designer who codes.
+              <br /> I'm <button
+                className={`underline ${tooltipButtonClass}`}
+                type="button"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("eshayat", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("eshayat", event.currentTarget)
+                }
+              >
+                Eshayat
+                <span
+                  className={getTooltipClass("eshayat")}
+                  style={getTooltipStyle("eshayat")}
+                  data-tooltip-content
+                >
+                 Eshayat Al-Wasiu
+                </span>
+              </button>.
             </h1>
             <p className="text-stone-300/70 mt-4">
               Currently maintaining personal{" "}
@@ -204,7 +221,7 @@ export default function Banner() {
               </a>{" "}
               & <a
                 className="text-stone-200 hover:underline active:text-stone-400 transition-all duration-300"
-                href="https://esyt.eshayat.com"
+                href="https://github.com/ESHAYAT102/archon"
                 target="blank"
                 data-tooltip-trigger
                 onClick={(event) => showTooltipOnTouch("esyt", event, true)}
@@ -245,8 +262,25 @@ export default function Banner() {
                   years old
                 </span>
               </button>{" "}
-              designer based in Bangladesh, and I love to code.
-              I've always been obsessed with computers, like{" "}
+              programmer based in Bangladesh and a Linux nerd (Arch <button
+                className={tooltipButtonClass}
+                type="button"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("btw", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("btw", event.currentTarget)
+                }
+              >
+                btw
+                <span
+                  className={getTooltipClass("btw")}
+                  style={getTooltipStyle("btw")}
+                  data-tooltip-content
+                >
+                  by the way
+                </span>
+              </button>).
+              Computers have fascinated me for as long as I can remember. Like,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
@@ -265,12 +299,12 @@ export default function Banner() {
                   what do you mean
                 </span>
               </button>{" "}
-              I can tell a box made out of metal and all to do something and
-              it literally does it. I used to draw in MS Paint a lot as a kid,
-              so the designer perspective probably started from there. I really
-              love the concept of telling the computer to do something for me,
-              which got me into programming so much. I love developing tools
-              for the developer community to... make the world a better place,{" "}
+              you can tell a box made of metal what to do and it just... does
+              it? Before code, there was MS Paint; years of drawing as a kid
+              probably shaped my eye for design. That same curiosity eventually
+              turned into programming. These days, most of my time goes into
+              building tools for the developer community and maybe making the
+              world a little better,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
@@ -292,7 +326,24 @@ export default function Banner() {
             </p>
             <br />
             <p className="text-stone-300/70">
-              I use Arch btw...
+              I use Arch <button
+                className={tooltipButtonClass}
+                type="button"
+                data-tooltip-trigger
+                onClick={(event) => showTooltipOnTouch("btw", event)}
+                onMouseEnter={(event) =>
+                  updateTooltipAlignment("btw", event.currentTarget)
+                }
+              >
+                btw
+                <span
+                  className={getTooltipClass("btw")}
+                  style={getTooltipStyle("btw")}
+                  data-tooltip-content
+                >
+                  by the way
+                </span>
+              </button>...
             </p>
            <Suspense fallback={<GitHubContributionsFallback />}>
               <GitHubContributions
