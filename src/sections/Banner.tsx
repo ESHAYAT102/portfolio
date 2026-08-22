@@ -224,19 +224,19 @@ export default function Banner() {
                 href="https://github.com/ESHAYAT102/archon"
                 target="blank"
                 data-tooltip-trigger
-                onClick={(event) => showTooltipOnTouch("esyt", event, true)}
+                onClick={(event) => showTooltipOnTouch("archon", event, true)}
                 onMouseEnter={(event) =>
-                  updateTooltipAlignment("esyt", event.currentTarget)
+                  updateTooltipAlignment("archon", event.currentTarget)
                 }
               >
                 <span className="relative group">
-                  <span className="text-stone-200">ESYT</span>
+                  <span className="text-stone-200">Archon</span>
                   <span
-                    className={getTooltipClass("esyt")}
-                    style={getTooltipStyle("esyt")}
+                    className={getTooltipClass("archon")}
+                    style={getTooltipStyle("archon")}
                     data-tooltip-content
                   >
-                    Automated React project scaffolding tool
+                    One command to set up Omarchy
                   </span>
                 </span>
               </a>.
@@ -262,24 +262,7 @@ export default function Banner() {
                   years old
                 </span>
               </button>{" "}
-              programmer based in Bangladesh and a Linux nerd (Arch <button
-                className={tooltipButtonClass}
-                type="button"
-                data-tooltip-trigger
-                onClick={(event) => showTooltipOnTouch("btw", event)}
-                onMouseEnter={(event) =>
-                  updateTooltipAlignment("btw", event.currentTarget)
-                }
-              >
-                btw
-                <span
-                  className={getTooltipClass("btw")}
-                  style={getTooltipStyle("btw")}
-                  data-tooltip-content
-                >
-                  by the way
-                </span>
-              </button>).
+              programmer and Linux nerd based in Bangladesh.
               Computers have fascinated me for as long as I can remember. Like,{" "}
               <button
                 className={tooltipButtonClass}
@@ -299,12 +282,12 @@ export default function Banner() {
                   what do you mean
                 </span>
               </button>{" "}
-              you can tell a box made of metal what to do and it just... does
+              I can tell a box made of metal what to do and it just... does
               it? Before code, there was MS Paint; years of drawing as a kid
               probably shaped my eye for design. That same curiosity eventually
               turned into programming. These days, most of my time goes into
               building tools for the developer community and maybe making the
-              world a little better,{" "}
+              world a better place,{" "}
               <button
                 className={tooltipButtonClass}
                 type="button"
