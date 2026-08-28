@@ -33,9 +33,9 @@ const stackGroups = [
     tools: ["Figma", "Notion", "tldraw"],
   },
   {
-    title: "Apps I Like",
+    title: "Software I Love",
     description: "A few tools and environments I enjoy using day to day.",
-    tools: ["Zen Browser", "Ghostty", "Zed", "LocalSend"],
+    tools: ["Omarchy", "Zen Browser", "Ghostty", "Neovim", "Zed", "LocalSend", "OpenCode"],
   },
 ];
 
