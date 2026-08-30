@@ -14,10 +14,6 @@ export default function Hobbies() {
         <div className="px-4 min-[1000px]:px-20 py-20">
           <div className="mb-12 max-w-2xl">
             <p className="font-bold text-balance">Things I Love to Do</p>
-            <p className="text-stone-300/70 mt-4 text-pretty">
-              Interests that keep me curious, creative, and always making
-              something.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 min-[760px]:grid-cols-2 border border-stone-600/60">
