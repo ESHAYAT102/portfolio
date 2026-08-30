@@ -20,7 +20,7 @@ const stackGroups = [
   {
     title: "Backend",
     description: "Creating APIs and small services that support the app.",
-    tools: ["Node.js", "Express", "Python", "Go"],
+    tools: ["Node.js", "Bun", "Express", "Python", "Go"],
   },
   {
     title: "Shipping",
