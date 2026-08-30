@@ -30,7 +30,7 @@ const stackGroups = [
   {
     title: "Design & Planning",
     description: "Turning rough ideas into usable interfaces and roadmaps.",
-    tools: ["Figma", "Notion", "tldraw"],
+    tools: ["Figma", "tldraw"],
   },
   {
     title: "Software I Love",
