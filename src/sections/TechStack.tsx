@@ -47,10 +47,6 @@ export default function TechStack() {
           <div className="px-4 min-[1000px]:px-20 py-20">
             <div className="mb-12 max-w-2xl">
               <p className="font-bold">Tech Stack</p>
-              <p className="text-stone-300/70 mt-4">
-                Tools I reach for when designing, building, and shipping web
-                projects.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 min-[760px]:grid-cols-2 border border-stone-600/60">
