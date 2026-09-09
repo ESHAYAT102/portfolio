@@ -16,9 +16,14 @@ export default function OpenSource() {
       link: "https://github.com/ESHAYAT102/notification-center-omarchy-plugin",
     },
     {
-      name: "Hide Icons",
-      description: "Hide Omarchy menu bar icons, keep your desktop clean",
-      link: "https://github.com/ESHAYAT102/hide-icons-omarchy-plugin",
+      name: "Ollama Server",
+      description: "Change Ollama backend servers in just one click",
+      link: "https://github.com/ESHAYAT102/ollama-omarchy-plugin",
+    },
+    {
+      name: "Oribt",
+      description: "Talk to your AI agent in a fun way",
+      link: "https://github.com/ESHAYAT102/orbit-omarchy-plugin",
     },
     {
       name: "Vicinae Confetti Extension",
