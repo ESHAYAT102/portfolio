@@ -21,7 +21,7 @@ export default function OpenSource() {
       link: "https://github.com/ESHAYAT102/ollama-omarchy-plugin",
     },
     {
-      name: "Oribt",
+      name: "Orbit",
       description: "Talk to your AI agent in a fun way",
       link: "https://github.com/ESHAYAT102/orbit-omarchy-plugin",
     },
