@@ -17,13 +17,23 @@ export default function OpenSource() {
     },
     {
       name: "Ollama Server",
-      description: "Change Ollama backend servers in just one click",
+      description: "Change Ollama backend servers in just one click on Omarchy",
       link: "https://github.com/ESHAYAT102/ollama-omarchy-plugin",
     },
     {
+      name: "Omicon",
+      description: "Change your app icons on Omarchy",
+      link: "https://github.com/ESHAYAT102/omicon-omarchy-plugin",
+    },
+    {
       name: "Orbit",
-      description: "Talk to your AI agent in a fun way",
+      description: "Talk to your AI agent in a fun way on Omarchy",
       link: "https://github.com/ESHAYAT102/orbit-omarchy-plugin",
+    },
+    {
+      name: "OmaWispr",
+      description: "Minimal HUD for Voxtype on Omarchy",
+      link: "https://github.com/ESHAYAT102/omawispr-omarchy-plugin",
     },
     {
       name: "Vicinae Confetti Extension",
