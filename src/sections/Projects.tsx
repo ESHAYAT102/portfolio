@@ -15,6 +15,11 @@ export default function Projects() {
     description: "Automated React project scaffolding tool",
     link: "https://esyt.eshayat.com",
   },
+  {
+    name: "Glitter",
+    description: "Web based terminal emulator",
+    link: "https://github.com/ESHAYAT102/glitter",
+  },
    {
     name: "MarkDown",
     description: "Markdown preview utility tool",
