@@ -1,8 +1,10 @@
 const hobbies = [
   "Photography",
   "Learning about space",
+  "Ricing Linux",
   "Homelabing",
   "Self-hosting",
+  "Formula1",
   "Listening to music",
   "Solving Rubik's Cubes",
 ];
