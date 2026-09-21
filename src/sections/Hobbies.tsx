@@ -4,7 +4,7 @@ const hobbies = [
   "Ricing Linux",
   "Homelabing",
   "Self-hosting",
-  "Formula1",
+  "Formula 1",
   "Listening to music",
   "Solving Rubik's Cubes",
 ];
