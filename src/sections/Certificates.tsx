@@ -10,6 +10,20 @@ function isTouchLikeDevice() {
   return window.matchMedia("(hover: none), (pointer: coarse)").matches;
 }
 
+const landscapeCertificates = [
+  {
+    id: "cert5",
+    alt: "Picture of a certificate by Boot.dev for Learn Linux",
+  },
+  { id: "cert1", alt: "Picture of a certificate by Programming Hero" },
+  { id: "cert2", alt: "Picture of a certificate by Codingal" },
+];
+
+const portraitCertificates = [
+  { id: "cert3", alt: "Picture of a certificate by Codingal" },
+  { id: "cert4", alt: "Picture of a certificate by Codingal" },
+];
+
 function CertificateImage({
   id,
   alt,
@@ -82,41 +96,29 @@ export default function Banner() {
         <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="px-4 min-[1000px]:px-20 py-20">
             <p className="mb-12 font-bold">Certificates</p>
-            <div className="grid grid-cols-1 min-[760px]:grid-cols-3 gap-6 w-full">
-              <div className="flex flex-col gap-6 justify-between min-w-0">
-                <div data-certificate>
+            <div className="grid grid-cols-1 min-[760px]:grid-cols-3 gap-6 w-full items-end">
+              {landscapeCertificates.map((cert) => (
+                <div key={cert.id} data-certificate className="min-w-0">
                   <CertificateImage
-                    id="cert1"
-                    alt="Picture of a certificate by Programming Hero"
-                    active={activeCertificate === "cert1"}
-                    onClick={() => toggleCertificate("cert1")}
+                    id={cert.id}
+                    alt={cert.alt}
+                    active={activeCertificate === cert.id}
+                    onClick={() => toggleCertificate(cert.id)}
                   />
                 </div>
-                <div data-certificate>
+              ))}
+            </div>
+            <div className="grid grid-cols-1 min-[760px]:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mt-6 items-start">
+              {portraitCertificates.map((cert) => (
+                <div key={cert.id} data-certificate className="min-w-0">
                   <CertificateImage
-                    id="cert2"
-                    alt="Picture of a certificate by Codingal"
-                    active={activeCertificate === "cert2"}
-                    onClick={() => toggleCertificate("cert2")}
+                    id={cert.id}
+                    alt={cert.alt}
+                    active={activeCertificate === cert.id}
+                    onClick={() => toggleCertificate(cert.id)}
                   />
                 </div>
-              </div>
-              <div className="min-w-0" data-certificate>
-                <CertificateImage
-                  id="cert3"
-                  alt="Picture of a certificate by Codingal"
-                  active={activeCertificate === "cert3"}
-                  onClick={() => toggleCertificate("cert3")}
-                />
-              </div>
-              <div className="min-w-0" data-certificate>
-                <CertificateImage
-                  id="cert4"
-                  alt="Picture of a certificate by Codingal"
-                  active={activeCertificate === "cert4"}
-                  onClick={() => toggleCertificate("cert4")}
-                />
-              </div>
+              ))}
             </div>
           </div>
         </div>
