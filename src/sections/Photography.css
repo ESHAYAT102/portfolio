@@ -1,0 +1,38 @@
+.photography-stage {
+  height: clamp(380px, 48vw, 520px);
+}
+
+.photography-placeholder {
+  height: 100%;
+  background: #1c1917;
+}
+
+.photography-stills a:focus-visible {
+  outline: 2px solid #e7e5e4;
+  outline-offset: 4px;
+}
+
+.photography-stills {
+  display: flex;
+  height: 100%;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-color: #78716c #1c1917;
+  padding: 4px 4px 20px;
+}
+
+.photography-stills figure {
+  flex: 0 0 min(82%, 520px);
+  scroll-snap-align: start;
+}
+
+.photography-stills img {
+  display: block;
+  width: 100%;
+  height: calc(100% - 64px);
+  object-fit: contain;
+  background: #1c1917;
+}
+
