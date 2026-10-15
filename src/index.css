@@ -54,6 +54,7 @@
 }
 
 :root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -136,4 +137,47 @@
 
 @utility link-underline {
     @apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current;
+}
+
+.fluid-item-reveal {
+  display: grid;
+  min-width: 0;
+}
+
+.fluid-item {
+  position: relative;
+  min-width: 0;
+}
+
+/* Keyboard focus never waits for a decorative entrance. */
+[data-fluid-reveal]:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.fluid-control {
+  transition: transform 150ms var(--ease-out), color 150ms ease,
+    background-color 150ms ease;
+}
+
+.fluid-control:active {
+  transform: scale(0.96);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fluid-control:hover {
+    transform: translateY(-2px);
+  }
+
+  .fluid-control:active {
+    transform: scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-fluid-reveal],
+  .fluid-item,
+  .fluid-control {
+    transform: none !important;
+  }
 }

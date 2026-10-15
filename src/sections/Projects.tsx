@@ -1,3 +1,5 @@
+import { FluidItem, FluidReveal } from "@/components/motion/FluidMotion";
+
 export default function Projects() {
   const projects = [
   {
@@ -62,14 +64,15 @@ export default function Projects() {
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="px-4 min-[1000px]:px-20 py-20">
-            <p className="font-bold">Projects</p>
+            <FluidReveal><p className="font-bold">Projects</p></FluidReveal>
             <div className="mt-12">
               {projects.map((project, index) => (
-                <div
+                <FluidItem
                   key={project.name}
+                  order={index % 2}
                   className={`
                     ${index === 0 ? "border" : "border-x border-b"}
-                    border-stone-600/60 p-8 hover:bg-stone-50/10 transition-all duration-300
+                    border-stone-600/60 p-8 hover:bg-stone-50/10 transition-colors duration-150
                   `}
                 >
                   <div className="flex">
@@ -78,7 +81,7 @@ export default function Projects() {
                     </p>{" "}
                     <p className="pt-1.5 pl-4 text-stone-300/70">
                       <a
-                        className="text-stone-200 hover:underline active:text-stone-400 transition-all duration-300"
+                        className="text-stone-200 hover:underline active:text-stone-400 transition-colors duration-150"
                         href={project.link}
                         target="blank"
                       >
@@ -87,7 +90,7 @@ export default function Projects() {
                       — {project.description}
                     </p>
                   </div>
-                </div>
+                </FluidItem>
               ))}
             </div>
           </div>

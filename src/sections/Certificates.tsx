@@ -1,7 +1,8 @@
+import { FluidItem, FluidReveal } from "@/components/motion/FluidMotion";
 import { useEffect, useState } from "react";
 
 const imageClass =
-  "select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100";
+  "select-none block w-full h-auto max-w-full object-contain grayscale opacity-70 transition-[filter,opacity] duration-150 [@media(hover:hover)_and_(pointer:fine)]:group-hover:grayscale-0 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100";
 
 const certificateSizes =
   "(min-width: 1000px) calc((100vw - 304px) / 3), (min-width: 760px) calc((100vw - 80px) / 3), calc(100vw - 32px)";
@@ -95,29 +96,29 @@ export default function Banner() {
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="px-4 min-[1000px]:px-20 py-20">
-            <p className="mb-12 font-bold">Certificates</p>
+            <FluidReveal><p className="mb-12 font-bold">Certificates</p></FluidReveal>
             <div className="grid grid-cols-1 min-[760px]:grid-cols-3 gap-6 w-full items-end">
               {landscapeCertificates.map((cert) => (
-                <div key={cert.id} data-certificate className="min-w-0">
+                <FluidItem key={cert.id} data-certificate className="min-w-0">
                   <CertificateImage
                     id={cert.id}
                     alt={cert.alt}
                     active={activeCertificate === cert.id}
                     onClick={() => toggleCertificate(cert.id)}
                   />
-                </div>
+                </FluidItem>
               ))}
             </div>
             <div className="grid grid-cols-1 min-[760px]:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mt-6 items-start">
               {portraitCertificates.map((cert) => (
-                <div key={cert.id} data-certificate className="min-w-0">
+                <FluidItem key={cert.id} data-certificate className="min-w-0">
                   <CertificateImage
                     id={cert.id}
                     alt={cert.alt}
                     active={activeCertificate === cert.id}
                     onClick={() => toggleCertificate(cert.id)}
                   />
-                </div>
+                </FluidItem>
               ))}
             </div>
           </div>
