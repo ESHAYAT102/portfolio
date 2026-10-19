@@ -139,7 +139,7 @@
     @apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current;
 }
 
-.fluid-item-reveal {
+.fluid-item-wrapper {
   display: grid;
   min-width: 0;
 }
@@ -147,12 +147,6 @@
 .fluid-item {
   position: relative;
   min-width: 0;
-}
-
-/* Keyboard focus never waits for a decorative entrance. */
-[data-fluid-reveal]:focus-within {
-  opacity: 1 !important;
-  transform: none !important;
 }
 
 .fluid-control {
@@ -175,8 +169,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-fluid-reveal],
-  .fluid-item,
   .fluid-control {
     transform: none !important;
   }

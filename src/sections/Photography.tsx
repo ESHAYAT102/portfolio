@@ -9,7 +9,6 @@ import {
 } from "react";
 import { photographs, photographyIsDemo } from "@/data/photography";
 import "./Photography.css";
-import { FluidReveal } from "@/components/motion/FluidMotion";
 
 const FlexCarousel = lazy(() => import("@/components/reactbits/FlexCarousel"));
 const motionQuery = "(prefers-reduced-motion: reduce)";
@@ -90,7 +89,7 @@ export default function Photography() {
     >
       <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 border-b min-[1000px]:border-x border-stone-600/60">
         <div className="px-4 min-[1000px]:px-20 py-20">
-          <FluidReveal className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-4">
             <h2 id="photography-heading" className="font-bold">
               Photography
             </h2>
@@ -101,7 +100,7 @@ export default function Photography() {
             >
               Download
             </a>
-          </FluidReveal>
+          </div>
           {photographyIsDemo && (
             <p className="mt-6 text-xs text-stone-400">
               Preview gallery · Sample images from Unsplash

@@ -1,4 +1,3 @@
-import { FluidReveal } from "@/components/motion/FluidMotion";
 import {
   Suspense,
   useEffect,
@@ -156,8 +155,8 @@ export default function Banner() {
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
         <div className="mx-0 min-w-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="min-w-0 px-4 min-[1000px]:px-20 pt-10 pb-20 min-[760px]:py-20">
-            <FluidReveal><p><span className="text-stone-300/70">Linux nerd</span> && <span className="text-stone-300/70">Developer</span> && <span className="text-stone-300/70">Designer</span></p></FluidReveal>
-            <FluidReveal order={1}><h1 className="text-3xl font-semibold mt-10">
+            <div><p><span className="text-stone-300/70">Linux nerd</span> && <span className="text-stone-300/70">Developer</span> && <span className="text-stone-300/70">Designer</span></p></div>
+            <div><h1 className="text-3xl font-semibold mt-10">
               Hi there!
               <br /> I'm <button
                 className={`underline ${tooltipButtonClass}`}
@@ -177,8 +176,8 @@ export default function Banner() {
                  Eshayat Al-Wasiu
                 </span>
               </button>.
-            </h1></FluidReveal>
-            <FluidReveal order={2}><p className="text-stone-300/70 mt-4">
+            </h1></div>
+            <div><p className="text-stone-300/70 mt-4">
               Currently maintaining personal{" "}
               <button
                 className={tooltipButtonClass}
@@ -241,9 +240,9 @@ export default function Banner() {
                   </span>
                 </span>
               </a>.
-            </p></FluidReveal>
+            </p></div>
             <br />
-            <FluidReveal order={3}><p className="text-stone-300/70">
+            <div><p className="text-stone-300/70">
               Hey! I'm a {currentYear - 2010}{" "}
               <button
                 className={tooltipButtonClass}
@@ -307,9 +306,9 @@ export default function Banner() {
                   I guess
                 </span>
               </button>{" "} :)
-            </p></FluidReveal>
+            </p></div>
             <br />
-            <FluidReveal order={4}><p className="text-stone-300/70">
+            <div><p className="text-stone-300/70">
               I use Arch <button
                 className={tooltipButtonClass}
                 type="button"
@@ -328,14 +327,14 @@ export default function Banner() {
                   by the way
                 </span>
               </button>...
-            </p></FluidReveal>
-           <FluidReveal order={5}><Suspense fallback={<GitHubContributionsFallback />}>
+            </p></div>
+           <div><Suspense fallback={<GitHubContributionsFallback />}>
               <GitHubContributions
                 className="mt-12 min-w-0 w-full"
                 contributions={githubContributions}
                 githubProfileUrl="https://github.com/ESHAYAT102"
               />
-            </Suspense></FluidReveal>
+            </Suspense></div>
           </div>
         </div>
       </div>

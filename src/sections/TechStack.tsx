@@ -1,4 +1,4 @@
-import { FluidItem, FluidReveal } from "@/components/motion/FluidMotion";
+import { FluidItem } from "@/components/FluidItem";
 
 const stackGroups = [
   {
@@ -48,14 +48,13 @@ export default function TechStack() {
         <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
           <div className="px-4 min-[1000px]:px-20 py-20">
             <div className="mb-12 max-w-2xl">
-              <FluidReveal><p className="font-bold">Tech Stack</p></FluidReveal>
+              <div><p className="font-bold">Tech Stack</p></div>
             </div>
 
             <div className="grid grid-cols-1 min-[760px]:grid-cols-2 border border-stone-600/60">
               {stackGroups.map((group, index) => (
                 <FluidItem
                   key={group.title}
-                  order={index % 2}
                   className={`
                     border-stone-600/60 p-6 min-[760px]:p-8 hover:bg-stone-50/10 transition-colors duration-150
                     ${index > 0 ? "border-t" : ""}

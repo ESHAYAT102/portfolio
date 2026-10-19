@@ -1,4 +1,4 @@
-import { FluidItem, FluidReveal } from "@/components/motion/FluidMotion";
+import { FluidItem } from "@/components/FluidItem";
 
 const hobbies = [
   "Photography",
@@ -17,14 +17,13 @@ export default function Hobbies() {
       <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
         <div className="px-4 min-[1000px]:px-20 py-20">
           <div className="mb-12 max-w-2xl">
-            <FluidReveal><p className="font-bold text-balance">Things I Love to Do</p></FluidReveal>
+            <div><p className="font-bold text-balance">Things I Love to Do</p></div>
           </div>
 
           <div className="grid grid-cols-1 min-[760px]:grid-cols-2 border border-stone-600/60">
             {hobbies.map((hobby, index) => (
               <FluidItem
                 key={hobby}
-                order={index % 2}
                 className={`flex items-center gap-4 border-stone-600/60 p-5 min-[760px]:p-6 transition-colors duration-300 hover:bg-stone-50/10 ${
                   index > 0 ? "border-t" : ""
                 } ${index % 2 === 1 ? "min-[760px]:border-l" : ""} ${
