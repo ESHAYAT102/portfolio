@@ -1,0 +1,20 @@
+#root {
+  isolation: isolate;
+}
+
+.ascii-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: var(--color-stone-200);
+  font-family: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .ascii-background {
+    display: none;
+  }
+}
