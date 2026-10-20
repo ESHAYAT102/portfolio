@@ -29,11 +29,13 @@ function CertificateImage({
   id,
   alt,
   active,
+  backgroundLoad,
   onClick,
 }: {
   id: string;
   alt: string;
   active: boolean;
+  backgroundLoad: boolean;
   onClick?: () => void;
 }) {
   return (
@@ -52,7 +54,8 @@ function CertificateImage({
           className={`${imageClass} ${active ? "grayscale-0 opacity-100" : ""}`}
           src={`${id}.png`}
           alt={alt}
-          loading="lazy"
+          loading={backgroundLoad ? "eager" : "lazy"}
+          fetchPriority={backgroundLoad ? "low" : undefined}
           decoding="async"
         />
       </picture>
@@ -61,9 +64,17 @@ function CertificateImage({
 }
 
 export default function Banner() {
+  const [backgroundLoad, setBackgroundLoad] = useState(false);
   const [activeCertificate, setActiveCertificate] = useState<string | null>(
     null,
   );
+
+  useEffect(() => {
+    const loadCertificates = () => setBackgroundLoad(true);
+    if (document.readyState === "complete") loadCertificates();
+    else window.addEventListener("load", loadCertificates, { once: true });
+    return () => window.removeEventListener("load", loadCertificates);
+  }, []);
 
   useEffect(() => {
     if (!isTouchLikeDevice()) return;
@@ -104,6 +115,7 @@ export default function Banner() {
                     id={cert.id}
                     alt={cert.alt}
                     active={activeCertificate === cert.id}
+                    backgroundLoad={backgroundLoad}
                     onClick={() => toggleCertificate(cert.id)}
                   />
                 </FluidItem>
@@ -116,6 +128,7 @@ export default function Banner() {
                     id={cert.id}
                     alt={cert.alt}
                     active={activeCertificate === cert.id}
+                    backgroundLoad={backgroundLoad}
                     onClick={() => toggleCertificate(cert.id)}
                   />
                 </FluidItem>

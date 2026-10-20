@@ -14,7 +14,7 @@ export default function AsciiBackground() {
     if (!canvas || !context) return;
 
     const preference = window.matchMedia(
-      "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+      "(prefers-reduced-motion: no-preference)",
     );
     const cells = new Map<number, TrailCell>();
     let width = 0;
@@ -92,9 +92,13 @@ export default function AsciiBackground() {
       }
     }
 
-    function move(event: PointerEvent) {
-      if (!preference.matches || document.hidden || event.pointerType !== "mouse") return;
-      const { clientX: x, clientY: y } = event;
+    function move(event: PointerEvent | TouchEvent) {
+      if (!preference.matches || document.hidden) return;
+      // Touch events keep arriving during native scrolling, after pointercancel.
+      if ("pointerType" in event && event.pointerType === "touch") return;
+      const point = "touches" in event ? event.touches[0] : event;
+      if (!point) return;
+      const { clientX: x, clientY: y } = point;
       const time = performance.now();
       if (previous && time - previous.time < 150) {
         const distance = Math.hypot(x - previous.x, y - previous.y);
@@ -118,6 +122,15 @@ export default function AsciiBackground() {
       if (!event.relatedTarget) previous = null;
     }
 
+    function endTouch() {
+      previous = null;
+    }
+
+    function startTouch(event: TouchEvent) {
+      endTouch();
+      move(event);
+    }
+
     function reset() {
       stop();
       draw();
@@ -125,6 +138,11 @@ export default function AsciiBackground() {
 
     resize();
     window.addEventListener("pointermove", move, { passive: true });
+    window.addEventListener("pointerdown", move, { passive: true });
+    window.addEventListener("touchstart", startTouch, { passive: true });
+    window.addEventListener("touchmove", move, { passive: true });
+    window.addEventListener("touchend", endTouch);
+    window.addEventListener("touchcancel", endTouch);
     window.addEventListener("resize", resize);
     window.addEventListener("blur", reset);
     document.addEventListener("pointerout", leave);
@@ -134,6 +152,11 @@ export default function AsciiBackground() {
     return () => {
       stop();
       window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerdown", move);
+      window.removeEventListener("touchstart", startTouch);
+      window.removeEventListener("touchmove", move);
+      window.removeEventListener("touchend", endTouch);
+      window.removeEventListener("touchcancel", endTouch);
       window.removeEventListener("resize", resize);
       window.removeEventListener("blur", reset);
       document.removeEventListener("pointerout", leave);
