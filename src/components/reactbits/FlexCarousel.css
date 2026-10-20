@@ -25,7 +25,7 @@
 }
 
 .flex-carousel:focus-visible {
-  box-shadow: inset 0 0 0 2px rgba(128, 128, 140, 0.55);
+  box-shadow: inset 0 0 0 2px var(--color-ctp-mauve);
 }
 
 .flex-carousel__caption {

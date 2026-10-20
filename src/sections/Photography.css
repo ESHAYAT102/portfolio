@@ -4,11 +4,11 @@
 
 .photography-placeholder {
   height: 100%;
-  background: #1c1917;
+  background: var(--color-ctp-mantle);
 }
 
 .photography-stills a:focus-visible {
-  outline: 2px solid #e7e5e4;
+  outline: 2px solid var(--color-ctp-mauve);
   outline-offset: 4px;
 }
 
@@ -19,7 +19,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
-  scrollbar-color: #78716c #1c1917;
+  scrollbar-color: var(--color-ctp-surface2) var(--color-ctp-mantle);
   padding: 4px 4px 20px;
 }
 
@@ -33,6 +33,6 @@
   width: 100%;
   height: calc(100% - 64px);
   object-fit: contain;
-  background: #1c1917;
+  background: var(--color-ctp-mantle);
 }
 

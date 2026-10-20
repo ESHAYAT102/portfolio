@@ -23,7 +23,7 @@ const githubContributions = fetch(
   .catch(() => []);
 
 const tooltipBaseClass =
-  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-stone-500/10 backdrop-blur-sm text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!bottom-auto max-[759px]:z-50";
+  "absolute bottom-full mb-2 w-max max-w-[calc(100vw-2rem)] px-3 py-2 bg-ctp-surface0/80 backdrop-blur-sm text-ctp-text text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none max-[759px]:fixed max-[759px]:!bottom-auto max-[759px]:z-50";
 
 const tooltipAlignmentClass = {
   center: "left-1/2 -translate-x-1/2",
@@ -32,7 +32,7 @@ const tooltipAlignmentClass = {
 };
 
 const tooltipButtonClass =
-  "relative group inline cursor-pointer border-0 bg-transparent p-0 font-[inherit] text-stone-200";
+  "relative group inline cursor-pointer border-0 bg-transparent p-0 font-[inherit] text-ctp-text";
 
 type TooltipAlignment = keyof typeof tooltipAlignmentClass;
 type TooltipPosition = {
@@ -153,9 +153,9 @@ export default function Banner() {
   return (
     <div>
       <div className="w-screen min-[1000px]:w-full flex justify-center align-middle items-center">
-        <div className="mx-0 min-w-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-stone-600/60">
+        <div className="mx-0 min-w-0 min-[1000px]:mx-30 min-[1600px]:mx-38 w-full border-b border-l-0 min-[1000px]:border-l border-r-0 min-[1000px]:border-r border-ctp-surface1">
           <div className="min-w-0 px-4 min-[1000px]:px-20 pt-10 pb-20 min-[760px]:py-20">
-            <div><p><span className="text-stone-300/70">Linux nerd</span> && <span className="text-stone-300/70">Developer</span> && <span className="text-stone-300/70">Designer</span></p></div>
+            <div><p><span className="text-ctp-subtext0">Linux nerd</span> && <span className="text-ctp-subtext0">Developer</span> && <span className="text-ctp-subtext0">Designer</span></p></div>
             <div><h1 className="text-3xl font-semibold mt-10">
               Hi there!
               <br /> I'm <button
@@ -177,7 +177,7 @@ export default function Banner() {
                 </span>
               </button>.
             </h1></div>
-            <div><p className="text-stone-300/70 mt-4">
+            <div><p className="text-ctp-subtext0 mt-4">
               Currently maintaining personal{" "}
               <button
                 className={tooltipButtonClass}
@@ -199,7 +199,7 @@ export default function Banner() {
               </button>{" "}
               projects like {" "}
               <a
-                className="text-stone-200 hover:underline active:text-stone-400 transition-colors duration-150"
+                className="text-ctp-text hover:underline active:text-ctp-subtext0 transition-colors duration-150"
                 href="https://xenon.eshayat.com"
                 target="blank"
                 data-tooltip-trigger
@@ -209,7 +209,7 @@ export default function Banner() {
                 }
               >
                 <span className="relative group">
-                  <span className="text-stone-200">Xenon</span>
+                  <span className="text-ctp-text">Xenon</span>
                   <span
                     className={getTooltipClass("xenon")}
                     style={getTooltipStyle("xenon")}
@@ -220,7 +220,7 @@ export default function Banner() {
                 </span>
               </a>{" "}
               & <a
-                className="text-stone-200 hover:underline active:text-stone-400 transition-colors duration-150"
+                className="text-ctp-text hover:underline active:text-ctp-subtext0 transition-colors duration-150"
                 href="https://github.com/ESHAYAT102/archon"
                 target="blank"
                 data-tooltip-trigger
@@ -230,7 +230,7 @@ export default function Banner() {
                 }
               >
                 <span className="relative group">
-                  <span className="text-stone-200">Archon</span>
+                  <span className="text-ctp-text">Archon</span>
                   <span
                     className={getTooltipClass("archon")}
                     style={getTooltipStyle("archon")}
@@ -242,7 +242,7 @@ export default function Banner() {
               </a>.
             </p></div>
             <br />
-            <div><p className="text-stone-300/70">
+            <div><p className="text-ctp-subtext0">
               Hey! I'm a {currentYear - 2010}{" "}
               <button
                 className={tooltipButtonClass}
@@ -308,7 +308,7 @@ export default function Banner() {
               </button>{" "} :)
             </p></div>
             <br />
-            <div><p className="text-stone-300/70">
+            <div><p className="text-ctp-subtext0">
               I use Arch <button
                 className={tooltipButtonClass}
                 type="button"

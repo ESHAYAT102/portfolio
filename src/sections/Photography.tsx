@@ -38,10 +38,10 @@ function StillGallery() {
               height="600"
             />
           </a>
-          <figcaption className="mt-3 text-sm text-stone-300">
+          <figcaption className="mt-3 text-sm text-ctp-subtext1">
             {photo.title}
             {photo.subtitle && (
-              <span className="block text-stone-400">{photo.subtitle}</span>
+              <span className="block text-ctp-subtext0">{photo.subtitle}</span>
             )}
           </figcaption>
         </figure>
@@ -87,14 +87,14 @@ export default function Photography() {
       aria-labelledby="photography-heading"
       className="w-full scroll-mt-24"
     >
-      <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 border-b min-[1000px]:border-x border-stone-600/60">
+      <div className="mx-0 min-[1000px]:mx-30 min-[1600px]:mx-38 border-b min-[1000px]:border-x border-ctp-surface1">
         <div className="px-4 min-[1000px]:px-20 py-20">
           <div className="flex items-center justify-between gap-4">
             <h2 id="photography-heading" className="font-bold">
               Photography
             </h2>
             <a
-              className="hover:underline active:text-stone-400 transition-colors duration-150"
+              className="hover:underline active:text-ctp-subtext0 transition-colors duration-150"
               href="https://github.com/ESHAYAT102/gallery"
               target="blank"
             >
@@ -102,7 +102,7 @@ export default function Photography() {
             </a>
           </div>
           {photographyIsDemo && (
-            <p className="mt-6 text-xs text-stone-400">
+            <p className="mt-6 text-xs text-ctp-subtext0">
               Preview gallery · Sample images from Unsplash
             </p>
           )}
