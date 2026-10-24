@@ -139,3 +139,19 @@
   transition: color 150ms ease,
     background-color 150ms ease;
 }
+
+/* Dhaka's locator ring in the country-border tooltip. */
+.location-pin-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: location-pin-ring 3.6s var(--ease-out) infinite;
+}
+
+@keyframes location-pin-ring {
+  0% { transform: scale(.8); opacity: .9; }
+  75%, 100% { transform: scale(2.8); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location-pin-ring { animation: none; opacity: .65; }
+}

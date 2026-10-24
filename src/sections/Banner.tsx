@@ -9,6 +9,7 @@ import {
   GitHubContributions,
   GitHubContributionsFallback,
 } from "@/components/github-contributions";
+import LocationTooltip from "@/components/LocationTooltip";
 import type { Activity } from "@/components/contribution-graph";
 
 const githubContributions = fetch(
@@ -262,7 +263,7 @@ export default function Banner() {
                   years old
                 </span>
               </button>{" "}
-              programmer and Linux nerd based in Bangladesh.
+              programmer and Linux nerd based in <LocationTooltip />.
               Computers have fascinated me for as long as I can remember. Like,{" "}
               <button
                 className={tooltipButtonClass}
