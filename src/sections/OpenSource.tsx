@@ -3,6 +3,11 @@ import { FluidItem } from "@/components/FluidItem";
 export default function OpenSource() {
   const contributions = [
     {
+      name: "Horizon",
+      description: "Contributing: fixing bugs and adding features",
+      link: "https://github.com/ludovic111/horizon",
+    },
+    {
       name: "Confetti",
       description: "Raycast style confetti for Omarchy",
       link: "https://github.com/ESHAYAT102/confetti-omarchy-plugin",
